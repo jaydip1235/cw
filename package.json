@@ -2,7 +2,7 @@
   "name": "light-bootstrap-dashboard-react",
   "version": "2.0.1",
   "options": {
-    "allowedHosts": ["localhost", "100.80.227.7"],
+    "allowedHosts": ["localhost", "100.80.227.42"],
     "proxy": "https://100.80.227.42:5000"
   },
   "dependencies": {
