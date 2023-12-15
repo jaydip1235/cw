@@ -41,7 +41,7 @@ export default function IPC() {
         return { role, content: msgObj.message };
       });
       console.log(chatMsgs[chatMsgs.length - 1]);
-        const data=await axios.post('/chat',{query:chatMsgs[chatMsgs.length - 1].message,context:"indian-penal-code.pdf",init:true});
+        const data=await axios.post('http://localhost:5000/chat',{query:chatMsgs[chatMsgs.length - 1].message,context:"indian-penal-code.pdf",init:true});
         console.log(data);
         let data2=""
         if(data.data.response==="thread started"){
@@ -49,7 +49,7 @@ export default function IPC() {
             while(1){
               
   
-            data2=await axios.post('/chat',{query:chatMsgs[chatMsgs.length - 1].message,context:"indian-penal-code.pdf",init:false});
+            data2=await axios.post('http://localhost:5000/chat',{query:chatMsgs[chatMsgs.length - 1].message,context:"indian-penal-code.pdf",init:false});
             if(data2.data.response.endsWith("{##eoa##}")){
               setMessages([...chatMsgs, { message: data2.data.response.slice(0,-9).replace("<|/ASSISTANT|>", ""), sender: "ChatGPT" }]);
               break;
