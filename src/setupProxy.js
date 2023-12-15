@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/api',
+    '/chat',
     createProxyMiddleware({
-      target: 'http://localhost:6000',
+      target: 'http://100.80.227.42:5000',
       changeOrigin: true,
     })
   );
