@@ -1,9 +1,10 @@
 {
   "name": "light-bootstrap-dashboard-react",
   "version": "2.0.1",
+  "proxy": "http://100.80.227.42:5000",
   "options": {
-    "allowedHosts": ["localhost", "100.80.227.42"],
-    "proxy": "https://100.80.227.42:5000"
+    "allowedHosts": ["100.80.227.42"],
+    "proxy": "http://100.80.227.42:5000"
   },
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.8.54",
