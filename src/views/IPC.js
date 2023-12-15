@@ -17,7 +17,7 @@ export default function IPC() {
   
     const [messages, setMessages] = useState([
       {
-        message: "Hello, I am Case Whisper, Please ask anything related to this case",
+        message: "Hello, I am Case Whisper, Please ask anything related to Indian Penal Code",
         sender: "ChatGPT",
       },
     ]);
